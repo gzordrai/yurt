@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ "master" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "master" ]
+    branches: ["main"]
 
 env:
   CARGO_TERM_COLOR: always
@@ -14,13 +14,13 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Build
-      run: cargo build --verbose
+      - name: Build
+        run: cargo build --verbose
 
-    - name: Run tests
-      run: cargo test --verbose
+      - name: Run tests
+        run: cargo test --verbose
 
   clippy:
     name: Clippy
@@ -34,7 +34,7 @@ jobs:
           override: true
       - run: rustup component add clippy
       - run: cargo clippy --all-features -- -D warnings
-      
+
   fmt:
     name: Rustfmt
     runs-on: ubuntu-latest
