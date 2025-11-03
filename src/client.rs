@@ -8,21 +8,21 @@ use crate::{
 
 const BASE_URI: &str = "https://aoe4guides.com/api";
 
-pub struct YurtClient {
+pub struct OrdaClient {
     http: Client,
 }
 
-impl YurtClient {
-    /// Creates a new [`YurtClient`] instance using the default API base URL
+impl OrdaClient {
+    /// Creates a new [`OrdaClient`] instance using the default API base URL
     ///
     /// This constructor initializes a reusable `reqwest::Client`
     /// that maintains connection pools and reduces overhead
     ///
     /// # Example
     /// ```
-    /// use yurt::YurtClient;
+    /// use orda::OrdaClient;
     ///
-    /// let client = YurtClient::new();
+    /// let client = OrdaClient::new();
     /// ```
     pub fn new() -> Self {
         Self {
@@ -43,11 +43,11 @@ impl YurtClient {
     ///
     /// # Example
     /// ```
-    /// use yurt::YurtClient;
+    /// use orda::OrdaClient;
     ///
     /// # #[tokio::main]
     /// # async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    /// let client = YurtClient::new();
+    /// let client = OrdaClient::new();
     /// let status = client.get_status().await?;
     ///
     /// assert_eq!(status.status, "running");
@@ -78,11 +78,11 @@ impl YurtClient {
     ///
     /// # Example
     /// ```
-    /// use yurt::{YurtClient, Civilization, SortBy};
+    /// use orda::{OrdaClient, Civilization, SortBy};
     ///
     /// #[tokio::main]
     /// async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    /// let client = YurtClient::new();
+    /// let client = OrdaClient::new();
     ///
     /// // Fetch the top 10 French builds sorted by score
     /// let builds = client.get_builds(Civilization::Fre, Some(SortBy::Score), false).await?;
@@ -119,11 +119,11 @@ impl YurtClient {
     ///
     /// # Example
     /// ```
-    /// use yurt::YurtClient;
+    /// use orda::OrdaClient;
     ///
     /// # #[tokio::main]
     /// # async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    /// let client = YurtClient::new();
+    /// let client = OrdaClient::new();
     ///
     /// let build = client.get_build("00I7J47dv26cPbKmXYkO", false).await?;
     /// println!("Build title: {}", build.title.unwrap_or_default());
@@ -160,11 +160,11 @@ impl YurtClient {
     ///
     /// # Example
     /// ```no_run
-    /// use yurt::{YurtClient, Civilization, SortBy};
+    /// use orda::{OrdaClient, Civilization, SortBy};
     ///
     /// # #[tokio::main]
     /// # async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    /// let client = YurtClient::new();
+    /// let client = OrdaClient::new();
     ///
     /// let favorites = client
     ///     .get_favorites("vOiAUO06vkMXuPuYb92APdyLDUO2", Civilization::Any, None, false)
@@ -195,7 +195,7 @@ impl YurtClient {
     }
 }
 
-impl Default for YurtClient {
+impl Default for OrdaClient {
     fn default() -> Self {
         Self::new()
     }

@@ -1,8 +1,8 @@
-# yurt
+# orda
 
 Rust client library for the [aoe4guides.com](https://aoe4guides.com) API.
 
-Yurt provides a simple and type-safe interface for fetching build orders,
+Orda provides a simple and type-safe interface for fetching build orders,
 favorites, and other data from aoe4guides.com.
 
 Internally, it wraps the public REST API using `reqwest` and `serde`.
@@ -15,27 +15,27 @@ Internally, it wraps the public REST API using `reqwest` and `serde`.
 
 ## Install
 
-Add **Yurt** to your project using Cargo:
+Add **Orda** to your project using Cargo:
 
 ```bash
-cargo add yurt
+cargo add orda
 ```
 
 Or manually in your `Cargo.toml`:
 
 ```toml
 [dependencies]
-yurt = "0.1"
+orda = "0.1"
 ```
 
 ## Usage
 
 ```rust
-use yurt::{YurtClient, Civilization, SortBy};
+use orda::{OrdaClient, Civilization, SortBy};
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let client = YurtClient::new();
+    let client = OrdaClient::new();
 
     // Fetch API status
     let status = client.get_status().await?;

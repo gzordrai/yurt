@@ -36,7 +36,7 @@ impl Query {
     ///
     /// # Example
     /// ```
-    /// use yurt::{Civilization, Query, SortBy};
+    /// use orda::{Civilization, Query, SortBy};
     ///
     /// let query = Query::from_parts(Civilization::Mon, Some(SortBy::Score), false);
     /// // => ?civ=FRE&orderBy=score
