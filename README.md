@@ -25,7 +25,7 @@ Or manually in your `Cargo.toml`:
 
 ```toml
 [dependencies]
-orda = "0.1"
+orda = "0.1.1"
 ```
 
 ## Usage
