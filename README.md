@@ -61,10 +61,10 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
 ## Api overview
 
-- get_status() => Returns the API status (always "running")
-- get_builds(civ, order_by, overlay) => Fetches up to 10 build orders
-- get_build(id, overlay) => Fetches a single build order by ID
-- get_favorites(user_id, civ, order_by, overlay) => Fetches user favorites
+- `get_status()` => Returns the API status (always "running")
+- `get_builds(civ, order_by, overlay)` => Fetches up to 10 build orders
+- `get_build(id, overlay)` => Fetches a single build order by ID
+- `get_favorites(user_id, civ, order_by, overlay)` => Fetches user favorites
 
 ## License
 
