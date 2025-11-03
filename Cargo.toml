@@ -6,6 +6,7 @@ license = "Apache-2.0"
 description = "Rust client library for the aoe4guides.com API"
 homepage = "https://github.com/gzordrai/orda"
 repository = "https://github.com/gzordrai/orda"
+documentation = "https://docs.rs/orda/latest/orda/"
 readme = "README.md"
 keywords = ["aoe4", "aoe4guides", "api-client", "age-of-empires", "wrapper"]
 categories = ["api-bindings", "game-development", "network-programming"]
