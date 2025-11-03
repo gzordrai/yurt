@@ -35,8 +35,8 @@ impl Query {
     /// their API string representations.
     ///
     /// # Example
-    /// ```no_run
-    /// use yurt::{Query, Civilization, SortBy};
+    /// ```
+    /// use yurt::{Civilization, Query, SortBy};
     ///
     /// let query = Query::from_parts(Civilization::Mon, Some(SortBy::Score), false);
     /// // => ?civ=FRE&orderBy=score
